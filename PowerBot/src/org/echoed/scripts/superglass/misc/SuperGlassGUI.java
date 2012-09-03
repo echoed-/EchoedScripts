@@ -1,4 +1,5 @@
 package org.echoed.scripts.superglass.misc;
+
 import org.echoed.scripts.superglass.EchoedSuperGlass;
 
 import javax.swing.*;
@@ -13,7 +14,7 @@ import java.awt.event.ActionListener;
  * Time: 1:03 PM
  * To change this template use File | Settings | File Templates.
  */
-public class SuperGlassGUI extends JFrame{
+public class SuperGlassGUI extends JFrame {
     private static final long serialVersionUID = 1L;
 
     public SuperGlassGUI() {
@@ -22,8 +23,6 @@ public class SuperGlassGUI extends JFrame{
 
 
     private void startBtnActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        // TODO add your code here
         EchoedSuperGlass.setMouseSpeed(mouseSpeedSlider.getValue());
         EchoedSuperGlass.setMouseKeys(MouseKeysCheckBox.isSelected());
         Constants.setSecondaryItem(secondaryItemComboBox.getSelectedItem().toString());

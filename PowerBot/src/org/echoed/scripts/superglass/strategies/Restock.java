@@ -25,7 +25,7 @@ import org.echoed.scripts.superglass.misc.Constants;
 
 import java.awt.*;
 
-public class Restock extends Strategy implements Runnable,Condition {
+public class Restock extends Strategy implements Runnable, Condition {
     private boolean suicide = EchoedSuperGlass.getSuicide();
     private boolean mouseKeys = EchoedSuperGlass.getMouseKeys();
 
@@ -188,8 +188,6 @@ public class Restock extends Strategy implements Runnable,Condition {
         }
         return 0;
     }
-
-
 
 
     public String getStatus() {

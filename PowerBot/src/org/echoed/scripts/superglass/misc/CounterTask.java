@@ -16,7 +16,6 @@ public class CounterTask extends LoopTask implements Runnable {
     private static int curSand;
 
 
-
     public static int getStartMolten() {
 
         return startMolten;
@@ -53,8 +52,6 @@ public class CounterTask extends LoopTask implements Runnable {
     public static int getSandUsed() {
         return startSand - curSand;
     }
-
-
 
 
     @Override

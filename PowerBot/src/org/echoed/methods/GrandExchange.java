@@ -17,7 +17,7 @@ public class GrandExchange {
 
             String line;
             String rawItemDetail = "";
-            while((line = br.readLine()) != null) rawItemDetail += line;
+            while ((line = br.readLine()) != null) rawItemDetail += line;
 
             br.close();
 
@@ -31,12 +31,13 @@ public class GrandExchange {
             item.setMembersOnly(rawItemDetail.replaceFirst(".+\"members\":\"(.+?)\".+", "$1").equals("true"));
 
             return item;
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("Error while retrieving item details from Grand Exchange: " + e.getMessage());
         }
 
         return null;
     }
+
     public static GEItem getGEItemByName(String itemName) {
         try {
             URL url = new URL("http://services.runescape.com/m=itemdb_rs/results.ws");
@@ -58,14 +59,14 @@ public class GrandExchange {
             String content = "";
 
             boolean save = false;
-            while((line = in.readLine()) != null) {
-                if(line.contains(saveFrom))
+            while ((line = in.readLine()) != null) {
+                if (line.contains(saveFrom))
                     save = true;
 
-                if(save)
+                if (save)
                     content += line;
 
-                if(save && line.contains(saveTill))
+                if (save && line.contains(saveTill))
                     break;
             }
             in.close();
@@ -73,11 +74,11 @@ public class GrandExchange {
             try {
                 Integer.parseInt(content.toLowerCase().replaceFirst(".+obj=(.+?)\">" + itemName.toLowerCase() + "</a>.+", "$1"));
             } catch (Exception e) {
-                throw new Exception("Item \""+ itemName +"\" was not found.");
+                throw new Exception("Item \"" + itemName + "\" was not found.");
             }
 
             return GrandExchange.getGEItemByID(Integer.parseInt(content.toLowerCase().replaceFirst(".+obj=(.+?)\">" + itemName.toLowerCase() + "</a>.+", "$1")));
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("Error while retrieving an item from the Grand Exchange: " + e.getMessage());
         }
         return null;

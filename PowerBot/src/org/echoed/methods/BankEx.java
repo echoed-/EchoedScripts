@@ -18,11 +18,12 @@ public class BankEx {
 
     public final static int COMPONENT_P2P_ITEM_COUNT = 31;
     public final static int COMPONENT_P2P_ITEM_MAX = 32;
-    public static void depositAllExcept(int... items){
+
+    public static void depositAllExcept(int... items) {
         Item[] invItems = Inventory.getAllItems(true);
-        for(Item item: invItems){
-            if(!Arrays.asList(items).contains(item.getId())){
-               Bank.deposit(item.getId(),0);
+        for (Item item : invItems) {
+            if (!Arrays.asList(items).contains(item.getId())) {
+                Bank.deposit(item.getId(), 0);
             }
         }
 

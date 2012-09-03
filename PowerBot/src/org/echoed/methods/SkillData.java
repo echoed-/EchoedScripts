@@ -7,6 +7,7 @@ package org.echoed.methods;
  * Time: 12:16 AM
  * To change this template use File | Settings | File Templates.
  */
+
 import org.powerbot.game.api.methods.tab.Skills;
 
 import java.awt.*;
@@ -45,12 +46,12 @@ public class SkillData {
     }
 
     public int xpTL() {
-        return Skills.getExperienceToLevel(skillint, Skills.getLevel(skillint)+1);
+        return Skills.getExperienceToLevel(skillint, Skills.getLevel(skillint) + 1);
     }
 
 
-    public int percentTL(){
-        return (Skills.getExperience(skillint)/Skills.getExperience(Skills.getLevel(skillint)+1)) * 100;
+    public int percentTL() {
+        return (Skills.getExperience(skillint) / Skills.getExperience(Skills.getLevel(skillint) + 1)) * 100;
     }
 
     public int xpPH() {

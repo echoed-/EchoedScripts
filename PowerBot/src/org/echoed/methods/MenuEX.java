@@ -1,4 +1,5 @@
 package org.echoed.methods;
+
 import org.powerbot.game.api.methods.node.Menu;
 
 /**
@@ -10,7 +11,7 @@ import org.powerbot.game.api.methods.node.Menu;
  */
 public class MenuEX {
 
-    public static boolean click(String action){
-       return Menu.clickIndex(Menu.getIndex(action));
+    public static boolean click(String action) {
+        return Menu.clickIndex(Menu.getIndex(action));
     }
 }

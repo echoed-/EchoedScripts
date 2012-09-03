@@ -34,6 +34,7 @@ public class ImageEX {
         is.close();
         os.close();
     }
+
     public static BufferedImage getImage(String fileName, String imageURL,
                                          String scriptName) {
         try {
@@ -49,16 +50,17 @@ public class ImageEX {
                 BufferedImage image = null;
                 URL url = new URL(imageURL);
                 image = ImageIO.read(url);
-                ImageIO.write((RenderedImage) image, "PNG", f);
+                ImageIO.write(image, "PNG", f);
                 return image;
             }
             BufferedImage img = ImageIO.read(f);
             return img;
         } catch (Exception e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
         return null;
     }
+
     public static BufferedImage getLogo() {
         String LogoName = "echo_logo.png";
         String imgUrl = "http://i583.photobucket.com/albums/ss271/echoed/syncScriptLogo-1.png";
@@ -72,7 +74,7 @@ public class ImageEX {
                 BufferedImage image = null;
                 URL url = new URL(imgUrl);
                 image = ImageIO.read(url);
-                ImageIO.write((RenderedImage) image, "PNG", f);
+                ImageIO.write(image, "PNG", f);
                 return image;
             }
             BufferedImage img = ImageIO.read(f);

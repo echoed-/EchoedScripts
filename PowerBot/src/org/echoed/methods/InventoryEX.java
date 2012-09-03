@@ -14,16 +14,14 @@ import java.util.Collection;
  * To change this template use File | Settings | File Templates.
  */
 public class InventoryEX {
-    public static boolean contains(int idx){
+    public static boolean contains(int idx) {
         return Inventory.getCount(idx) > 0;
 
     }
-    public static boolean containsAll(int... items){
+
+    public static boolean containsAll(int... items) {
         Item[] invItems = Inventory.getItems();
 
-        if(Arrays.asList(invItems).contains(items)){
-            return true;
-        }
-        return false;
+        return Arrays.asList(invItems).contains(items);
     }
 }

@@ -3,6 +3,7 @@ package org.echoed.methods.paint;
 import org.powerbot.game.api.methods.input.Mouse;
 
 import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Andrew

@@ -1,4 +1,5 @@
 package org.echoed.methods;
+
 import java.awt.Image;
 import java.io.IOException;
 import java.net.URL;
@@ -33,7 +34,7 @@ public class GEItem {
       * Returns string with RS price notation, when given an integer (e.g. 171700 -> 171.7k)
       */
     public static String priceToString(String normalCoins) {
-        if(normalCoins.length() < 6)
+        if (normalCoins.length() < 6)
             return normalCoins;
 
         return normalCoins.replaceAll("([0-9])[0-9]{" + ((normalCoins.length() < 8) ? 2 : ((normalCoins.length() < 10) ? 5 : 8)) + "}$", ".$1" + ((normalCoins.length() < 8) ? "K" : ((normalCoins.length() < 10) ? "M" : "B")));

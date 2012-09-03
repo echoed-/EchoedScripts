@@ -12,7 +12,7 @@ import org.powerbot.game.api.util.Random;
  */
 public class Utils {
     public static void sleep(int min, int max) {
-        int time = Random.nextInt(min,max);
+        int time = Random.nextInt(min, max);
         Task.sleep(time);
 
     }

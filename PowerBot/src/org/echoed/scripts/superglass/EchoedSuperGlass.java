@@ -30,6 +30,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.NumberFormat;
 import java.util.LinkedList;
 //testing
+
 /**
  * Created with IntelliJ IDEA.
  * User: Andrew
@@ -37,8 +38,8 @@ import java.util.LinkedList;
  * Time: 5:53 PM
  * To change this template use File | Settings | File Templates.
  */
-@Manifest(authors = { "Echoed" }, name = "EchoedSuperGlass", description = "Make's Molten Glass Using Super Glass Make", version = 1.0)
-public class EchoedSuperGlass extends ActiveScript implements PaintListener,MessageListener {
+@Manifest(authors = {"Echoed"}, name = "EchoedSuperGlass", description = "Make's Molten Glass Using Super Glass Make", version = 1.0)
+public class EchoedSuperGlass extends ActiveScript implements PaintListener, MessageListener {
 
     //paint&stats
     private String status = "initializing";
@@ -88,12 +89,12 @@ public class EchoedSuperGlass extends ActiveScript implements PaintListener,Mess
         return suicide;
     }
 
-    public static int getCast(){
+    public static int getCast() {
         return getMagicData().xpGained() / 78;
     }
 
     public static boolean getMouseKeys() {
-        // TODO Auto-generated method stub
+
         return mouseKeys;
     }
 
@@ -105,7 +106,7 @@ public class EchoedSuperGlass extends ActiveScript implements PaintListener,Mess
     /*
       * Mutator Methods
       */
-    public static void setProfit( ) {
+    public static void setProfit() {
         double TotalExpenses = 0;
         for (int i = 0; i < ExpenseCosts.length; i++) {
             TotalExpenses += ExpenseCosts[i] * ExpenseQty[i] * getCast();
@@ -120,7 +121,6 @@ public class EchoedSuperGlass extends ActiveScript implements PaintListener,Mess
     public static void setMouseKeys(final boolean b) {
         mouseKeys = b;
     }
-
 
 
     @Override
@@ -179,7 +179,7 @@ public class EchoedSuperGlass extends ActiveScript implements PaintListener,Mess
             }
             if (!Equipment.containsOneOf(Constants.AIR_STAFFS) || !Equipment.appearanceContainsOneOf(Constants.AIR_STAFFS)) {
                 //log(Color.red, "Start with a air staff equipped");
-               kill();
+                kill();
             }
 
             startTime = System.currentTimeMillis();
@@ -194,11 +194,10 @@ public class EchoedSuperGlass extends ActiveScript implements PaintListener,Mess
 
         } else {
             //log(Color.red, "Please log in before using script");
-           kill();
+            kill();
         }
 
     }
-
 
 
     @Override

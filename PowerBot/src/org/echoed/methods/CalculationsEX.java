@@ -8,9 +8,10 @@ package org.echoed.methods;
  * To change this template use File | Settings | File Templates.
  */
 public class CalculationsEX {
-    public static double perHour(final double qty, final long startTime){
+    public static double perHour(final double qty, final long startTime) {
         return ((qty) * 3600000D / (System.currentTimeMillis() - startTime));
     }
+
     public static String parseTime(long millis) {
         long time = millis / 1000;
         String seconds = Integer.toString((int) (time % 60));

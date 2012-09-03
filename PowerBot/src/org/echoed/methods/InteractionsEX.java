@@ -26,8 +26,9 @@ public class InteractionsEX {
         }
         return false;
     }
+
     public static void objectInteract(Tile tile, String Action) {
-        SceneObject object = SceneEntities.getAt(tile.getX(),tile.getY());
+        SceneObject object = SceneEntities.getAt(tile.getX(), tile.getY());
         if (object != null) {
             if (object.isOnScreen()) {
                 object.interact(Action);

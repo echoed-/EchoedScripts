@@ -7,11 +7,12 @@ import java.awt.*;
 import java.awt.font.GraphicAttribute;
 
 public class EchoPaint {
-    public static void drawStatBar(final Graphics g, final Color barColor, final int idx){
+    public static void drawStatBar(final Graphics g, final Color barColor, final int idx) {
         Graphics2D g1 = (Graphics2D) g;
         g1.setColor(Color.BLACK);
 
     }
+
     public static void drawProgBar(final Graphics g, Color progColor, int x, int y, int w, int height, SkillData skill) {
         int pctTL = skill.percentTL();
         int width = (int) ((w - 2) * (double) pctTL / 100);
