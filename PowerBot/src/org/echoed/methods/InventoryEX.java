@@ -1,6 +1,10 @@
 package org.echoed.methods;
 
 import org.powerbot.game.api.methods.tab.Inventory;
+import org.powerbot.game.api.wrappers.node.Item;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,5 +17,13 @@ public class InventoryEX {
     public static boolean contains(int idx){
         return Inventory.getCount(idx) > 0;
 
+    }
+    public static boolean containsAll(int... items){
+        Item[] invItems = Inventory.getItems();
+
+        if(Arrays.asList(invItems).contains(items)){
+            return true;
+        }
+        return false;
     }
 }

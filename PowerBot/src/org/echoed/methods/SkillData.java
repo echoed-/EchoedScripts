@@ -49,6 +49,10 @@ public class SkillData {
     }
 
 
+    public int percentTL(){
+        return (Skills.getExperience(skillint)/Skills.getExperience(Skills.getLevel(skillint)+1)) * 100;
+    }
+
     public int xpPH() {
         return (int) ((xpGained()) * 3600000D / (System.currentTimeMillis() - startime));
     }
